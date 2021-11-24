@@ -1,0 +1,22 @@
+# Ønskede værdier
+# elafgift: 1.13
+# systemydelser: 0.14
+# nettarif_c: 0.30
+
+# Hvad jeg har af værdier og kode lige pt.
+
+{% set s = {
+"elafgift": 1.13,
+"transport_lavlast": 0.30,
+"transport_spidslast": 0.33,
+"abonnement": 0.14
+} %}
+{% if now().month >= 10 or now().month <4 %}
+{% if now().hour >=17 and now().hour <21 %}
+{{s.elafgift+s.transport_spidslast+s.abonnement}}
+{% else %}
+{{s.elafgift+s.transport_lavlast+s.abonnement}}
+{% endif %}
+{% else %}
+{{s.elafgift+s.transport_lavlast+s.abonnement}}
+{% endif %}
