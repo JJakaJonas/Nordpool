@@ -1,43 +1,8 @@
-# Ønskede værdier
-# elafgift: 1.13
-# systemydelser: 0.14
-# nettarif_c: 0.30
-
-# Forsøgte
-
 {% set s = {
-"pso-tarif": 0.00,
-"elafgift": 1.13,
-"systemydelser": 0.14,
-"nettarif_c": 0.30,
-"abonnement": 0.00
-} %}
-{{s.pso-tarif+s.elafgift+s.systemydelser+s.nettarif_c+s.abonnement}}
-
-# Samt
-
-{% set s = {
-"pso-tarif": 0.00,
-"elafgift": 1.13,
-"systemydelser": 0.14,
-"nettarif_c": 0.30,
-"abonnement": 0.00
-} %}
-{% if now().month >= 10 or now().month <4 %}
-{% if now().hour >=17 and now().hour <21 %}
-{{s.pso-tarif+s.elafgift+s.systemydelser+s.nettarif_c+s.abonnement}}
-
-# de er begge forsøgt med følgende som afslutning
-
-{% endif %}
-
-# Hvad jeg har af værdier og kode lige pt.
-
-{% set s = {
-"elafgift": 1.13,
-"transport_lavlast": 0.30,
-"transport_spidslast": 0.33,
-"abonnement": 0.14
+"elafgift": 0.90,
+"transport_lavlast": 0.29,
+"transport_spidslast": 0.78,
+"abonnement": 0.26
 } %}
 {% if now().month >= 10 or now().month <4 %}
 {% if now().hour >=17 and now().hour <21 %}
