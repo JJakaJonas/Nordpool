@@ -1,8 +1,8 @@
 {% set s = {
-"elafgift": 0.90,
-"transport_lavlast": 0.29,
-"transport_spidslast": 0.78,
-"abonnement": 0.26
+   "elafgift": 0.90,
+   "transport_lavlast": 0.29,
+   "transport_spidslast": 0.78,
+   "abonnement": 0.26,
 } %}
 {% if now().month >= 10 or now().month <4 %}
 {% if now().hour >=17 and now().hour <21 %}
